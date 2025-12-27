@@ -87,6 +87,48 @@
 </section>
 
 <section>
+  <h2>Mes projets (accès protégé)</h2>
+  <p>Cette section contient mes projets réalisés en Python et R. L’accès est réservé.</p>
+
+  <div id="password-box">
+    <input type="password" id="password" placeholder="Mot de passe" />
+    <button onclick="checkPassword()">Accéder</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+
+  <div id="projects" style="display:none;">
+    <h3>Projets Python</h3>
+    <ul>
+      <li>Boosting des prédicteurs statistiques (Python)</li>
+      <li>Prédiction des prix des logements – NYC Housing</li>
+    </ul>
+
+```
+<h3>Projets R</h3>
+<ul>
+  <li>Analyses statistiques et visualisation de données</li>
+  <li>Régression et ANOVA sur données réelles</li>
+</ul>
+```
+
+  </div>
+</section>
+
+<script>
+  function checkPassword() {
+    const pwd = document.getElementById("password").value;
+    const correctPassword = "OumarData";
+
+    if (pwd === correctPassword) {
+      document.getElementById("projects").style.display = "block";
+      document.getElementById("password-box").style.display = "none";
+    } else {
+      document.getElementById("error").innerText = "Mot de passe incorrect";
+    }
+  }
+</script>
+
+<section>
   <h2>Contact</h2>
   <p>Email : <a href="mailto:omar.k.kaba@gmail.com">omar.k.kaba@gmail.com</a></p>
   <p>Téléphone : 07 44 75 18 87</p>
